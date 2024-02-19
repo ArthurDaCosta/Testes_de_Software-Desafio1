@@ -27,6 +27,6 @@ class MyClass
 
     public function __autoload()
     {
-      
+       $this->a = 'autoload';
     }
 }

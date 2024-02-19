@@ -9,10 +9,11 @@ class MyClassTest extends TestCase
     {
         $mock = $this->getMockBuilder('MyClass')
             ->setConstructorArgs(array(1, 2, 3))
-            ->addMethods(array('Teste'))
+            ->addMethods(array('Teste', 'Teste2'))
             ->getMock();
 
         $this->assertTrue(method_exists($mock, 'Teste'));
+        $this->assertTrue(method_exists($mock, 'Teste2'));
     }
 
     public function testSetConstructorArgs()
@@ -67,9 +68,10 @@ class MyClassTest extends TestCase
             ->disableOriginalConstructor()
             ->enableAutoload() 
             ->getMock();
+
+        
             
-
-
+        $this->assertEquals('autoload', $mock->a);
     }
 
     public function testMethodWillReturn()
@@ -100,3 +102,14 @@ class MyClassTest extends TestCase
         $this->assertEquals($mock, $mock->addMethod());
     }
 }
+
+/* Documentação:
+
+    testAddMethods() - Criar dois novos métodos na classe Mock da MyClass para testar se ela é capaz de receber novos métodos.
+    testSetConstructorArgs() - Define valores para o construtor da classe MyClass através de um mock e testa se os valores foram definidos corretamente.
+    testSetMockClassName() - Altera o nome da mock da classe MyClass e testa se o nome da classe do mock foi alterado com sucesso.
+    testDisableOriginalConstructor() - Remove a necessidade de definir os membros do construtor na classe mock e testa se eles foram definidos commo nulo.
+    testDisableOriginalClone() - Testa se o método __clone da classe MyClass foi desabilitado.
+    testDisableAutoload() - Testa se o método __autoload da classe MyClass foi desabilitado.
+    testMethodWillReturn() - Testa se o método addMethod da classe MyClass retorna 10.
+    testMethodReturnSelf() - Testa se o método addMethod da classe MyClass retorna a própria instância da classe.
