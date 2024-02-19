@@ -6,8 +6,10 @@ class ListaNumerica
 {
     function somarElementos(array $lista)
     {
-        foreach ($lista as $elemento) {
-            if (!is_numeric($elemento)) {
+        foreach ($lista as $elemento) 
+        {
+            if (!is_numeric($elemento)) 
+            {
                 return "Valores Inválidos";
             }
         }
@@ -22,8 +24,10 @@ class ListaNumerica
             return $maior = "Lista Vazia";
         }
 
-        foreach ($lista as $elemento) {
-            if (!is_numeric($elemento)) {
+        foreach ($lista as $elemento) 
+        {
+            if (!is_numeric($elemento)) 
+            {
                 return "Valores Inválidos";
             }
         }
@@ -39,8 +43,10 @@ class ListaNumerica
             return $menor = "Lista Vazia";
         }
 
-        foreach ($lista as $elemento) {
-            if (!is_numeric($elemento)) {
+        foreach ($lista as $elemento) 
+        {
+            if (!is_numeric($elemento)) 
+            {
                 return "Valores Inválidos";
             }
         }
@@ -52,8 +58,10 @@ class ListaNumerica
 
     function ordenarLista(array $lista)
     {
-        foreach ($lista as $elemento) {
-            if (!is_numeric($elemento)) {
+        foreach ($lista as $elemento) 
+        {
+            if (!is_numeric($elemento)) 
+            {
                 return "Valores Inválidos";
             }
         }
@@ -65,15 +73,19 @@ class ListaNumerica
 
     function filtarNumerosPares(array $lista)
     {
-        foreach ($lista as $elemento) {
-            if (!is_numeric($elemento)) {
+        foreach ($lista as $elemento) 
+        {
+            if (!is_numeric($elemento)) 
+            {
                 return "Valores Inválidos";
             }
         }
 
         $pares = [];
-        foreach ($lista as $elemento) {
-            if ($elemento % 2 === 0 && (int)$elemento == $elemento) {
+        foreach ($lista as $elemento) 
+        {
+            if ($elemento % 2 === 0 && (int)$elemento == $elemento) 
+            {
                 $pares[] = $elemento;
             } 
         }

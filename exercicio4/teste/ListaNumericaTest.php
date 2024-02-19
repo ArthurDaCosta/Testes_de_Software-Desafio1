@@ -61,9 +61,9 @@ class ListaNumericaTest extends TestCase
         $this->assertEquals(-4              , $listaNumerica->encontrarMenorElemento([-1, -2, -3, -4]));    //Menor elemento números negativos
         $this->assertEquals(-4              , $listaNumerica->encontrarMenorElemento([-1, 2, 3, -4]));      //Menor elemento números positivos e negativos
         $this->assertEquals(0               , $listaNumerica->encontrarMenorElemento([0, 0, 0, 0]));        //Menor elemento zeros
-        $this->assertEquals(1               , $listaNumerica->encontrarMenorElemento(['1', 2, 3, 4, 5]));   //Soma com string númerica
-        $this->assertEquals(1.2             , $listaNumerica->encontrarMenorElemento([1.2, 2.5, 3.7]));     //Soma com float
-        $this->assertEquals(1.2             , $listaNumerica->encontrarMenorElemento([1.2, '2.5', 3]));     //Soma com string númerica float
+        $this->assertEquals(1               , $listaNumerica->encontrarMenorElemento(['1', 2, 3, 4, 5]));   //Menor elemento string númerica
+        $this->assertEquals(1.2             , $listaNumerica->encontrarMenorElemento([1.2, 2.5, 3.7]));     //Menor elemento float
+        $this->assertEquals(1.2             , $listaNumerica->encontrarMenorElemento([1.2, '2.5', 3]));     //Menor elemento com string númerica float
         $this->assertEquals(1               , $listaNumerica->encontrarMenorElemento([1]));                 //Menor elemento de um elemento positivo
         $this->assertEquals(-2              , $listaNumerica->encontrarMenorElemento([-2]));                //Menor elemento de um elemento negativo
         $this->assertEquals(0               , $listaNumerica->encontrarMenorElemento([0]));                 //Menor elemento de um elemento zero
