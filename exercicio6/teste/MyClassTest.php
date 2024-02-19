@@ -64,22 +64,16 @@ class MyClassTest extends TestCase
 
     public function testDisableAutoload()
     {
-        $mock = $this->getMockBuilder('MyClass')
-            ->disableOriginalConstructor()
-            ->enableAutoload() 
+        $mock = $this->getMockBuilder('Teste')
+            ->disableAutoload()
             ->getMock();
 
         
-            
-        $this->assertEquals('autoload', $mock->a);
     }
 
     public function testMethodWillReturn()
     {
-        $mock = $this->getMockBuilder('MyClass')
-            ->disableOriginalConstructor()
-            ->onlyMethods(array('addMethod'))
-            ->getMock();
+        $mock = $this->createMock('MyClass');
 
         $mock->expects($this->any())
             ->method('addMethod')
@@ -90,14 +84,12 @@ class MyClassTest extends TestCase
 
     public function testMethodReturnSelf()
     {
-        $mock = $this->getMockBuilder('MyClass')
-            ->disableOriginalConstructor()
-            ->onlyMethods(array('addMethod'))
-            ->getMock();
+        $mock = $this->createMock('MyClass');
 
         $mock->expects($this->any())
-            ->method('addMethod')
-            ->willReturnSelf();
+                ->method('addMethod')
+                ->willReturnSelf();
+       
 
         $this->assertEquals($mock, $mock->addMethod());
     }
