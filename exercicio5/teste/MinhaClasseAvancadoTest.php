@@ -36,7 +36,7 @@ class MinhaClasseAvancadoTest extends TestCase
         $this->assertEquals(-3      , $minhaClasse->subtrair(-1, 2));      //Subtração de inteiros positivos e negativos
         $this->assertEquals(0       , $minhaClasse->subtrair(0, 0));       //Subtração de zeros
         $this->assertEquals(6       , $minhaClasse->subtrair(6, 0));       //Subtração de zero com inteiro positivo
-        $this->assertEquals(6       , $minhaClasse->somar(0, -6));         //Subtração de inteiro negativo com zero
+        $this->assertEquals(-6      , $minhaClasse->somar(0, -6));         //Subtração de inteiro negativo com zero
         $this->assertEquals(-3      , $minhaClasse->subtrair(1, "4"));     //Subtração com string númerica
         $this->assertEquals(-1.3    , $minhaClasse->subtrair(1.2, 2.5));   //Subtração com float
         $this->assertEquals(-1.3    , $minhaClasse->subtrair(1.2, '2.5')); //Subtração com string númerica float
