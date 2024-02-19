@@ -15,9 +15,9 @@ class MyClass
 
     public function __clone()
     {
-        $this->a = $this->a . 'clone';
-        $this->b = $this->b . 'clone';
-        $this->c = $this->c . 'clone';
+        $this->a = $this->a . ' clone';
+        $this->b = $this->b . ' clone';
+        $this->c = $this->c . ' clone';
     }
 
     public function addMethod()
@@ -27,6 +27,6 @@ class MyClass
 
     public function __autoload()
     {
-        return true;
+      
     }
 }

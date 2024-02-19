@@ -65,8 +65,9 @@ class MyClassTest extends TestCase
     {
         $mock = $this->getMockBuilder('MyClass')
             ->disableOriginalConstructor()
-            ->disableAutoload() 
+            ->enableAutoload() 
             ->getMock();
+            
 
 
     }
